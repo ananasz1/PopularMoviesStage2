@@ -6,8 +6,4 @@
     <dimen name="margin_small">4dp</dimen>
     <dimen name="details_activity_poster_width">100dp</dimen>
     <dimen name="details_activity_poster_height">150dp</dimen>
-    <dimen name="appbar_height">280dp</dimen>
-    <dimen name="expanded_title_margin">16dp</dimen>
-    <dimen name="margin_horizontal_16dp">16dp</dimen>
-    <dimen name="fab_elevation">6dp</dimen>
 </resources>
