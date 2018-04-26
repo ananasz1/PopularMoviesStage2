@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_trailer_thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_thumbnail_trailer"
+        android:paddingRight="@dimen/padding_thumbnail_trailer" />
+
+</LinearLayout>-->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    android:layout_margin="6dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/trailer_thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="trailer_thumbnail_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--
+        Icon Licence
+         <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons"
+         title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"
+         title="Flaticon">www.flaticon.com</a> is licensed by
+         <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+         target="_blank">CC 3.0 BY</a></div>
+        -->
+        <ImageView
+            android:id="@+id/play_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="play_image_content_description"
+            app:srcCompat="@drawable/ic_youtube"
+            app:layout_constraintBottom_toBottomOf="@+id/trailer_thumbnail"
+            app:layout_constraintEnd_toEndOf="@+id/trailer_thumbnail"
+            app:layout_constraintStart_toStartOf="@+id/trailer_thumbnail"
+            app:layout_constraintTop_toTopOf="@+id/trailer_thumbnail" />
+
+        <TextView
+            android:id="@+id/trailer_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_movie_poster"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textColor"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="10dp"
+            android:text="movie_trailer_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trailer_thumbnail" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

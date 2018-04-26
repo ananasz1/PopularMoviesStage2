@@ -1,0 +1,57 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\schmidegv\\Desktop\\AndroidStudio\\PopMov2-20180420T082137Z-001\\PopMov2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\schmidegv\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\0b4cf9e7626c44dfdec6fc8ca9fed494\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\schmidegv\\Desktop\\AndroidStudio\\PopMov2-20180420T082137Z-001\\PopMov2\\app\\src\\main\\res\\values-v16\\styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "59",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "478"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "294",
+                        "endLines": "13",
+                        "endColumns": "12",
+                        "endOffsets": "707"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\schmidegv\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\70eeb8fecfd1e0cb2c069ca6ec18cebc\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

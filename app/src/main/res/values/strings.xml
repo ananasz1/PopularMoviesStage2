@@ -1,0 +1,29 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Popular Movies</string>
+
+    <string name="most_popular">Most popular</string>
+    <string name="top_rated">Top rated</string>
+    <string name="favorites">Favorites</string>
+
+    <string name="error_no_internet">Cannot show movies offline.\nConnect to the Internet and try
+        again.</string>
+    <string name="no_genres">No genres</string>
+    <string name="error_no_movie">No movie available.</string>
+    <string name="average_vote_format"><xliff:g example="3.4" id="average_vote">%s</xliff:g> / 10</string>
+    <string name="original_title_format">(<xliff:g example="Original title" id="title">%s</xliff:g>)</string>
+
+    <!-- LABELS -->
+    <string name="label_rating">Rating</string>
+    <string name="label_release_date">Release date</string>
+    <string name="label_genre">Genre</string>
+    <string name="label_overview">Overview</string>
+    <string name="label_trailers">Trailers </string>
+    <string name="label_reviews">Reviews</string>
+    <string name="label_author">Author</string>
+
+    <!-- TOAST MESSAGES -->
+    <string name="add_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+
+
+</resources>
