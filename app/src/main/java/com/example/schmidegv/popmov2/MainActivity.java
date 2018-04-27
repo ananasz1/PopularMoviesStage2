@@ -25,6 +25,16 @@ import com.example.schmidegv.popmov2.model.Movie;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * When created this app,
+ * I have used materials from Udacity lessons
+ * sources from stackoverflow (OMG, many... :) )
+ * my earlier apps from ABND
+ * https://androidhive.info (for recyclerview)
+ * https://developer.android.com (for many parts of the app)
+ * https://code.tutsplus.com/tutorials/getting-started-with-retrofit-2--cms-27792 (Retrofit)
+ */
+
 public class MainActivity extends AppCompatActivity implements MovieAdapter.MovieOnClickListener,
         FetchMoviesTask.Listener, LoaderManager.LoaderCallbacks<Cursor> {
 
