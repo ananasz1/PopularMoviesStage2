@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_activity_padding_movie_poster">2dp</dimen>
+    <dimen name="main_activity_padding_poster">3dp</dimen>
     <dimen name="margin_large">24dp</dimen>
     <dimen name="margin_normal">16dp</dimen>
-    <dimen name="margin_small">4dp</dimen>
-    <dimen name="details_activity_poster_width">100dp</dimen>
-    <dimen name="details_activity_poster_height">150dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_title">8dp</dimen>
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="details_activity_poster_width">150dp</dimen>
+    <dimen name="details_activity_poster_height">200dp</dimen>
+    <dimen name="review_margin">6dp</dimen>
+    <dimen name="review_padding">6dp</dimen>
+    <dimen name="trailer_margin">8dp</dimen>
+    <dimen name="trailer_text_padding">10dp</dimen>
 </resources>

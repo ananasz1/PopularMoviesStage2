@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         outState.putString("subtitle", subtitle);
     }
 
-    protected void onRestoreInstanceState(Bundle state){
+    protected void onRestoreInstanceState(Bundle state) {
         super.onRestoreInstanceState(state);
         if (null == state) {
             loadMovieList(FetchMoviesTask.MOVIE_LIST_POPULAR);
@@ -158,12 +158,12 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
         if (newMovieListAvailable) {
             showMoviesList();
-            mAdapter.setMoviesData( movies );
+            mAdapter.setMoviesData(movies);
         } else {
             if (moviesDisplayed) {
-                Log.w( LOG_TAG, "No new data available to refresh the movies list." );
+                Log.w(LOG_TAG, "No new data available to refresh the movies list.");
             } else {
-                showMessage( R.string.error_no_internet );
+                showMessage(R.string.error_no_internet);
             }
         }
     }
@@ -243,5 +243,5 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         }
     }
 
-    }
+}
 

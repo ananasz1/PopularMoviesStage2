@@ -7,7 +7,7 @@
     <color name="colorAccent">#D7CCC8</color>
     <color name="textColor">#ffffff</color>
     <color name="movie_title">#000000</color>
-    <!--
+    <!-- blue-ish-grey version
         <color name="colorBackground">#607D8B</color>
         <color name="colorPrimary">#37474F</color>
         <color name="colorPrimaryDark">#455A64</color>

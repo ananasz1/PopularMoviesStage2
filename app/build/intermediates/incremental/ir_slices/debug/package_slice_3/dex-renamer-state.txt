@@ -1,4 +1,4 @@
-#Thu Apr 26 16:06:58 CEST 2018
+#Fri Apr 27 09:33:30 CEST 2018
 base.0=C\:\\Users\\schmidegv\\Desktop\\AndroidStudio\\PopMov2-20180420T082137Z-001\\PopMov2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 path.0=classes.dex
 renamed.0=classes.dex

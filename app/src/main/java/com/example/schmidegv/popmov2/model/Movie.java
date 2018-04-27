@@ -45,7 +45,6 @@ public class Movie implements Parcelable {
     @SerializedName("release_date")
     private String mReleaseDate;
 
-    // Movie Genres
     @SerializedName("genre_ids")
     private int[] mMovieGenreIds;
 
@@ -120,23 +119,14 @@ public class Movie implements Parcelable {
         this.mReleaseDate = releaseDate;
     }
 
-    /**
-     * Getter method - Movie Genres
-     */
     public int[] getGenreIds() {
         return mMovieGenreIds;
     }
 
-    /**
-     * Setter method - Movie Backdrop Path
-     */
     public void setGenreIds(int[] genreIds) {
         mMovieGenreIds = genreIds;
     }
 
-    /**
-     * Getter method - Movie Genres (comma separated)
-     **/
     public String getGenres(int[] genreIds) {
         List<String> genresList = new ArrayList<String>();
         String genres; // list of genres separated by commas (Action, Comedy, Horror)
@@ -168,7 +158,6 @@ public class Movie implements Parcelable {
         dest.writeString(mReleaseDate);
         dest.writeIntArray(mMovieGenreIds);
     }
-
 
 
     public static final Parcelable.Creator<Movie> CREATOR

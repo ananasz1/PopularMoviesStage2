@@ -23,8 +23,8 @@
                 android:id="@+id/movie_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_title"
                 android:textAppearance="?android:textAppearanceLarge"
                 android:textColor="@color/movie_title"
                 android:textStyle="bold" />
@@ -33,9 +33,9 @@
                 android:id="@+id/movie_original_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
                 android:layout_below="@id/movie_title"
                 android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
                 android:textAppearance="?android:textAppearanceMedium" />
         </LinearLayout>
 
@@ -43,82 +43,87 @@
             android:id="@+id/nested_scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_below="@id/linear_title">
+            android:layout_below="@id/linear_title"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="16dp"
-                android:layout_below="@id/linear_title">
+                android:layout_below="@id/linear_title"
+                android:paddingTop="@dimen/margin_normal">
 
 
                 <ImageView
                     android:id="@+id/movie_poster_img"
                     android:layout_width="@dimen/details_activity_poster_width"
                     android:layout_height="@dimen/details_activity_poster_height"
-                    android:layout_margin="6dp" />
+                    android:layout_margin="@dimen/margin_small" />
 
-                <TextView
-                    android:id="@+id/rating_label"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
                     android:layout_toRightOf="@id/movie_poster_img"
-                    android:fontFamily="sans-serif"
-                    android:text="@string/label_rating"
-                    style="@style/style_label" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/movie_vote_average"
-                    android:layout_below="@id/rating_label"
-                    android:layout_marginBottom="@dimen/margin_small"
-                    android:layout_toRightOf="@id/movie_poster_img"
-                    style="@style/style_details" />
+                    <TextView
+                        android:id="@+id/rating_label"
+                        style="@style/style_label"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/label_rating"
+                        tools:targetApi="jelly_bean" />
 
-                <TextView
-                    android:id="@+id/release_label"
-                    android:layout_below="@id/movie_vote_average"
-                    android:layout_toRightOf="@id/movie_poster_img"
-                    android:text="@string/label_release_date"
-                    style="@style/style_label" />
+                    <TextView
+                        android:id="@+id/movie_vote_average"
+                        style="@style/style_details"
+                        android:layout_marginBottom="@dimen/margin_small" />
 
-                <TextView
-                    android:id="@+id/movie_release_date"
-                    android:layout_below="@id/release_label"
-                    android:layout_toRightOf="@id/movie_poster_img"
-                    style="@style/style_details" />
+                    <TextView
+                        android:id="@+id/release_label"
+                        style="@style/style_label"
+                        android:text="@string/label_release_date" />
 
-                <TextView
-                    android:id="@+id/text_label_genre"
-                    android:layout_below="@id/movie_release_date"
-                    android:layout_toRightOf="@id/movie_poster_img"
-                    android:text="@string/label_genre"
-                    style="@style/style_label"/>
+                    <TextView
+                        android:id="@+id/movie_release_date"
+                        style="@style/style_details"
+                        android:layout_marginBottom="@dimen/margin_small" />
 
-                <TextView
-                    android:id="@+id/text_movie_genre"
-                    android:layout_below="@id/text_label_genre"
-                    android:layout_toRightOf="@id/movie_poster_img"
-                    style="@style/style_details"
-                    tools:context="@string/app_name" />
+                    <TextView
+                        android:id="@+id/text_label_genre"
+                        style="@style/style_label"
+                        android:text="@string/label_genre" />
+
+                    <TextView
+                        android:id="@+id/text_movie_genre"
+                        style="@style/style_details"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_normal"
+                        android:lines="2"
+                        tools:context="@string/app_name" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/overview_label"
+                    style="@style/style_label"
                     android:layout_below="@id/movie_poster_img"
-                    android:text="@string/label_overview"
-                    style="@style/style_label"/>
+                    android:text="@string/label_overview" />
+
                 <TextView
                     android:id="@+id/movie_synopsis"
+                    style="@style/style_details"
                     android:layout_below="@id/overview_label"
                     android:layout_marginBottom="@dimen/margin_large"
-                    android:layout_marginTop="@dimen/margin_normal"
-                    style="@style/style_details" />
+                    android:layout_marginTop="@dimen/margin_normal" />
 
 
                 <TextView
                     android:id="@+id/trailers_label"
+                    style="@style/style_label"
                     android:layout_below="@id/movie_synopsis"
-                    android:text="@string/label_trailers"
-                    style="@style/style_label" />
+                    android:text="@string/label_trailers" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_trailers"
@@ -133,9 +138,9 @@
 
                 <TextView
                     android:id="@+id/review_label"
+                    style="@style/style_label"
                     android:layout_below="@id/rv_trailers"
-                    android:text="@string/label_reviews"
-                    style="@style/style_label" />
+                    android:text="@string/label_reviews" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_movies_reviews"
@@ -153,13 +158,13 @@
         android:id="@+id/fav_movie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/fab_margin"
         android:clickable="true"
         android:onClick="onClickFavoritesButton"
         app:fabSize="normal"
         app:layout_anchor="@id/linear_title"
         app:layout_anchorGravity="right|bottom"
         app:srcCompat="@drawable/ic_favorite_border"
-        app:useCompatPadding="true"/>
+        app:useCompatPadding="true" />
 </android.support.design.widget.CoordinatorLayout>
 

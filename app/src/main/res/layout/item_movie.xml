@@ -9,6 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        android:padding="@dimen/main_activity_padding_movie_poster"/>
+        android:padding="@dimen/main_activity_padding_poster"/>
 
 </FrameLayout>

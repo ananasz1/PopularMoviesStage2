@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <ImageView
-        android:id="@+id/iv_trailer_thumbnail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/padding_thumbnail_trailer"
-        android:paddingRight="@dimen/padding_thumbnail_trailer" />
-
-</LinearLayout>-->
-
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/colorPrimaryDark"
-    android:layout_margin="6dp">
+    android:layout_margin="6dp"
+    app:cardBackgroundColor="@color/colorPrimaryDark">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -49,29 +36,26 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="@dimen/trailer_margin"
             android:contentDescription="play_image_content_description"
-            app:srcCompat="@drawable/ic_youtube"
             app:layout_constraintBottom_toBottomOf="@+id/trailer_thumbnail"
             app:layout_constraintEnd_toEndOf="@+id/trailer_thumbnail"
             app:layout_constraintStart_toStartOf="@+id/trailer_thumbnail"
-            app:layout_constraintTop_toTopOf="@+id/trailer_thumbnail" />
+            app:layout_constraintTop_toTopOf="@+id/trailer_thumbnail"
+            app:srcCompat="@drawable/ic_youtube" />
 
         <TextView
             android:id="@+id/trailer_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_movie_poster"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:textColor="@color/textColor"
+            android:layout_marginBottom="@dimen/trailer_margin"
+            android:layout_marginTop="@dimen/trailer_margin"
             android:ellipsize="end"
             android:lines="1"
-            android:padding="10dp"
+            android:padding="@dimen/trailer_text_padding"
             android:text="movie_trailer_title"
+            android:textColor="@color/textColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
