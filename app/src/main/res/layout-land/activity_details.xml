@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.schmidegv.popmov2.DetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_title"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/movie_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/movie_original_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_title"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_title"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_title"
+                    android:paddingTop="@dimen/margin_normal">
+
+
+                    <ImageView
+                        android:id="@+id/movie_poster_img"
+                        android:layout_width="@dimen/details_activity_poster_width"
+                        android:layout_height="@dimen/details_activity_poster_height"
+                        android:layout_margin="@dimen/margin_small" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_toRightOf="@id/movie_poster_img"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/rating_label"
+                            style="@style/style_label"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/label_rating"
+                            tools:targetApi="jelly_bean" />
+
+                        <TextView
+                            android:id="@+id/movie_vote_average"
+                            style="@style/style_details"
+                            android:layout_marginBottom="@dimen/margin_small" />
+
+                        <TextView
+                            android:id="@+id/release_label"
+                            style="@style/style_label"
+                            android:text="@string/label_release_date" />
+
+                        <TextView
+                            android:id="@+id/movie_release_date"
+                            style="@style/style_details"
+                            android:layout_marginBottom="@dimen/margin_small" />
+
+                        <TextView
+                            android:id="@+id/text_label_genre"
+                            style="@style/style_label"
+                            android:text="@string/label_genre" />
+
+                        <TextView
+                            android:id="@+id/text_movie_genre"
+                            style="@style/style_details"
+                            android:layout_marginBottom="@dimen/margin_small"
+                            android:layout_marginRight="@dimen/margin_normal"
+                            android:lines="2"
+                            tools:context="@string/app_name" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/overview_label"
+                        style="@style/style_label"
+                        android:layout_below="@id/movie_poster_img"
+                        android:text="@string/label_overview" />
+
+                    <TextView
+                        android:id="@+id/movie_synopsis"
+                        style="@style/style_details"
+                        android:layout_below="@id/overview_label"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_normal" />
+
+
+                    <TextView
+                        android:id="@+id/trailers_label"
+                        style="@style/style_label"
+                        android:layout_below="@id/movie_synopsis"
+                        android:text="@string/label_trailers" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_trailers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/trailers_label"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:orientation="horizontal"
+                        android:scrollbars="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                    <TextView
+                        android:id="@+id/review_label"
+                        style="@style/style_label"
+                        android:layout_below="@id/rv_trailers"
+                        android:text="@string/label_reviews" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_movies_reviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/review_label"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fav_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:onClick="onClickFavoritesButton"
+        app:fabSize="normal"
+        app:layout_anchor="@id/linear_title"
+        app:layout_anchorGravity="right|bottom"
+        app:srcCompat="@drawable/ic_favorite_border"
+        app:useCompatPadding="true" />
+
+</android.support.design.widget.CoordinatorLayout>
